@@ -2,18 +2,21 @@ import React from "react";
 import styled from "styled-components";
 
 const Wrapper=styled.div`
-  margin:auto;
-  width:24%;
   background-color:palegoldenrod;
-  font-size:6em;
-  font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family:Arial, Helvetica, sans-serif;
   text-align:center;
   color:cadetblue;
+  
 `
-const TimerClock = ({handleHour,handleMinute,hour, minute}) => (
+const Title = styled.span`
+font-size:10vw;
+
+`
+const TimerClock = ({hour, minute,second}) => (
   <Wrapper>
-    <span onChange={handleHour}>{hour}</span>:
-    <span onChange={handleMinute}>{minute}</span>
+    <Title>{hour}</Title><span>hr</span>
+    <Title>{minute}</Title><span>min</span>
+    <Title>{second}</Title>
   </Wrapper>
 );
 
