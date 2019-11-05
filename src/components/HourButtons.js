@@ -8,8 +8,8 @@ const Wrapper = styled.button`
   justify-content:space-between;
   align-items:center;
   background-color: transparent;
- 
-  border:none;
+  border:transparent;
+  
 `;
 const Button = styled.button`
   background-color: black;

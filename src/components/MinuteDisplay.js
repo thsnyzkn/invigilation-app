@@ -9,6 +9,7 @@ const Title = styled.span`
   border: 0.5vh solid #05386B;
   background-color: #A8D0E6;
   justify-content:space-between;
+  font-family: 'Black Ops One', cursive;
  
 `;
 

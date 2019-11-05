@@ -9,7 +9,7 @@ const Title = styled.span`
   border-radius: 2vw;
   border: 0.5vh solid #05386B;
   background-color: #A8D0E6;
-  
+  font-family: 'Black Ops One', cursive;
   
 `;
 

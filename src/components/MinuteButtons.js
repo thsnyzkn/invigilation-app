@@ -4,8 +4,8 @@ import styled from "styled-components";
 const Wrapper = styled.button`
   grid-column:auto/span 1;
   display:inline-flex;
-  flex-direction: column;
-  justify-content:space-around;
+  flex-flow: column nowrap;
+  justify-content:space-between;
   align-items:center;
   background-color: transparent;
   border:none;
