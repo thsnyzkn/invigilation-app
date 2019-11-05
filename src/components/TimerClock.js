@@ -1,22 +1,31 @@
 import React from "react";
 import styled from "styled-components";
+import HourButtons from './HourButtons'
+import MinuteButtons from './MinuteButtons'
+import Display from './Display';
+const Wrapper = styled.div`
+  /*display:flex;
+  flex-flow: row nowrap;
+  justify-content:space-evenly;
+  align-items:center; */
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(5vw,1fr));
+  grid-column-gap:2%;
+  padding: 5vh 0;
+  background-color: #F76C6C;
+  font-family: "Black Ops One", cursive;
+  margin:10% 25% auto;
+  box-shadow:inset 0px 0px 0px 0.5vw rebeccapurple;
+`;
 
-const Wrapper=styled.div`
-  background-color:palegoldenrod;
-  font-family:Arial, Helvetica, sans-serif;
-  text-align:center;
-  color:cadetblue;
-  
-`
-const Title = styled.span`
-font-size:10vw;
 
-`
-const TimerClock = ({hour, minute,second}) => (
+
+const TimerClock = ({hour, minute, second }) => (
   <Wrapper>
-    <Title>{hour}</Title><span>hr</span>
-    <Title>{minute}</Title><span>min</span>
-    <Title>{second}</Title>
+      <HourButtons/>
+      <Display/>
+      <MinuteButtons/>
+      
   </Wrapper>
 );
 

@@ -1,25 +1,26 @@
 import React from "react";
 import styled from "styled-components";
 const Section = styled.section`
-margin-top:2%;
-width:20%;
-  
+grid-column:5;
+grid-row:2;
+margin-bottom:25vh;
 `;
 const Title = styled.label`
   grid-row: 1;
   border-bottom:2px solid black;
   padding-bottom:1vh;
-  font-size:1em;
-  text-align:center;
-  line-height:3.5em;
-  vertical-align:top;
   
+  font-size:2vh;
+  text-align:center;
+  line-height:5.5vh;
+  vertical-align:top;
+
 `
 const Form = styled.form`
 display:grid;
 margin-left:44vw;
 grid-template-rows:33.3% 33.3% 33.3%;
-row-gap:10px;
+row-gap:1vh;
 `
 const Input = styled.input`
   box-sizing: border-box;
@@ -28,11 +29,11 @@ const Input = styled.input`
   grid-row:2;
 `
 const Submit = styled.button`
-  border:1px solid turquoise;
+  border:1px solid #05386B;
   box-sizing: border-box;
   border-radius:3px;
   grid-row:3;
-  background-color:tomato;
+  background-color:#374785;
   color:greenyellow;
   
 `

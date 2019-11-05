@@ -3,15 +3,18 @@ import TimerForm from "./components/TimerForm";
 import TimerClock from "./components/TimerClock";
 import useInterval from "./hooks/useInterval";
 import styled from "styled-components";
-//import './App.scss';
-
+import { createGlobalStyle } from "styled-components";
+const GlobalStyles = createGlobalStyle`
+  body {
+    @import url('https://fonts.googleapis.com/css?family=Black+Ops+One&display=swap');
+    
+  }
+`
 const Wrapper = styled.div`
-  margin: 0 auto;
-  max-width:100%;
-  display:grid;
-  grid-template-rows:53.3% 43.3% 13.3%;
+  
+  
 `;
-const Buttons = styled.div``;
+
 function App() {
   const [duration, setDuration] = useState(null);
   const [hour, setHour] = useState("00");
@@ -19,6 +22,7 @@ function App() {
   const [seconds, setSeconds] = useState("00");
   const [isRunning, setIsRunning] = useState(false);
   const [isSubmit, setIsSubmit] = useState(false);
+  
 
   const handleSubmit = event => {
     event.preventDefault();
@@ -61,20 +65,9 @@ function App() {
   useInterval(tick, isRunning ? 1000 : null);
   return (
     <Wrapper>
+    <GlobalStyles />
     <TimerClock hour={hour} minute={minutes} second={seconds} />
-      <TimerForm
-        duration={duration}
-        handleChange={handleChange}
-        handleSubmit={handleSubmit}
-        isSubmit={isSubmit}
-      />
       
-
-      <Buttons>
-        <button onClick={handleStart}>START</button>
-        <button onClick={handlePause}>{isRunning ? "PAUSE" : "RESUME"}</button>
-        <button onClick={console.log("HEBELE")}>RESET</button>
-      </Buttons>
     </Wrapper>
   );
 }
